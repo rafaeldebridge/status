@@ -6,6 +6,9 @@ sites:
   - name: deBridge
     url: https://debridge.finance
 
+  - name: deBridge APP
+    url: https://app.debridge.finance/
+
 status-website:
   baseUrl: /status 
   name: deBridge Status
