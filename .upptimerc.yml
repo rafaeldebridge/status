@@ -8,7 +8,7 @@ sites:
 
 status-website:
   baseUrl: /status 
-  name: Your Status Website
+  name: deBridge Status
   logoUrl: https://debridge.finance/assets/img/logo/debridge-dark.svg
 #status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
