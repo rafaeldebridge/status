@@ -11,7 +11,7 @@ sites:
 
 status-website:
   baseUrl: /status 
-  name: deBridge Status
+  name: deBridge Status Page
   logoUrl: https://debridge.finance/assets/img/logo/debridge-dark.svg
 
 incidents:
