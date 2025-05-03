@@ -10,6 +10,7 @@ sites:
     url: https://app.debridge.finance/
 
 status-website:
+  showIncidents: true
   baseUrl: /status 
   name: deBridge Status Page 
   logoUrl: https://debridge.finance/assets/img/logo/debridge-dark.svg
