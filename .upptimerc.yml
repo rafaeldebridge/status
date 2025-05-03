@@ -13,6 +13,11 @@ status-website:
   baseUrl: /status 
   name: deBridge Status Page 
   logoUrl: https://debridge.finance/assets/img/logo/debridge-dark.svg
+  navbar:
+    - title: deBridge
+      href: https://debridge.finance
+    - title: deBridge APP
+      href: https://app.debridge.finance/
 
 incidents:
   autoClose: true 
