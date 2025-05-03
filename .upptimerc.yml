@@ -17,7 +17,7 @@ status-website:
   navbar:
     - title: deBridge
       href: https://debridge.finance
-    - title: deBridge APP
+    - title: deBridge App
       href: https://app.debridge.finance/
 
 incidents:
