@@ -1,23 +1,5 @@
 [
   {
-    "name": "deBridge",
-    "url": "https://debridge.finance",
-    "icon": "https://icons.duckduckgo.com/ip3/debridge.finance.ico",
-    "slug": "de-bridge",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 502,
-    "timeDay": 427,
-    "timeWeek": 502,
-    "timeMonth": 502,
-    "timeYear": 502,
-    "dailyMinutesDown": {}
-  },
-  {
     "name": "deBridge APP",
     "url": "https://app.debridge.finance/",
     "icon": "https://icons.duckduckgo.com/ip3/app.debridge.finance.ico",
