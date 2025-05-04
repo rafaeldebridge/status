@@ -1,0 +1,86 @@
+name: Sync Opsgenie Incident
+
+on:
+  workflow_dispatch:
+    inputs:
+      status:
+        description: 'Alert status (open or closed)'
+        required: true
+        type: choice
+        options:
+          - open
+          - closed
+      title:
+        description: 'Incident title'
+        required: true
+      message:
+        description: 'Alert message (required for open)'
+        required: false
+
+jobs:
+  sync-incident:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sync Opsgenie incident
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const status = '${{ github.event.inputs.status }}';
+            const title = '${{ github.event.inputs.title }}';
+            const message = '${{ github.event.inputs.message }}';
+            const labels = ['incident'];
+
+            if (status === 'open') {
+              const body = `### Alert from Opsgenie\n\n${message}`;
+              
+              // Check if an incident with same title is already open
+              const openIssues = await github.paginate(
+                github.rest.issues.listForRepo,
+                {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  state: 'open',
+                  labels: 'incident',
+                }
+              );
+
+              const exists = openIssues.find(issue => issue.title.includes(title));
+              if (exists) {
+                console.log(`Incident already exists: #${exists.number}`);
+              } else {
+                const result = await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title,
+                  body,
+                  labels
+                });
+                console.log(`Created new incident: #${result.data.number}`);
+              }
+            }
+
+            if (status === 'closed') {
+              const openIssues = await github.paginate(
+                github.rest.issues.listForRepo,
+                {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  state: 'open',
+                  labels: 'incident',
+                }
+              );
+
+              const incident = openIssues.find(issue => issue.title.includes(title));
+              if (incident) {
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: incident.number,
+                  state: 'closed'
+                });
+                console.log(`Closed incident: #${incident.number}`);
+              } else {
+                console.log(`No matching open incident found for title: ${title}`);
+              }
+            }
