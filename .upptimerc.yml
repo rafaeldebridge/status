@@ -9,11 +9,11 @@ sites:
   - name: deBridge APP
     url: https://app.debridge.finance/
 
-status-website:
-  shouldShowIncidentIssues: true
-  baseUrl: /status 
+status-website:  
+  baseUrl: /status  
   name: deBridge Status Page
   logoUrl: https://debridge.finance/assets/img/logo/debridge-dark.svg
+  shouldShowIncidentIssues: true
   navbar:
     - title: deBridge
       href: https://debridge.finance
