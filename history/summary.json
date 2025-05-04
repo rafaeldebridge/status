@@ -1,10 +1,10 @@
 [
   {
     "name": "deBridge APP",
-    "url": "https://app.debridge.finance/",
-    "icon": "https://icons.duckduckgo.com/ip3/app.debridge.finance.ico",
+    "url": "https://app.debridge1.finance/",
+    "icon": "https://icons.duckduckgo.com/ip3/app.debridge1.finance.ico",
     "slug": "de-bridge-app",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
