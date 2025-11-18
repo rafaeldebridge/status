@@ -1,7 +1,7 @@
 url: https://app.debridge.finance/
-status: up
-code: 200
-responseTime: 418
-lastUpdated: 2025-11-17T23:12:34.832Z
+status: down
+code: 500
+responseTime: 450
+lastUpdated: 2025-11-18T12:57:16.403Z
 startTime: 2025-05-01T20:47:23.557Z
 generator: Upptime <https://github.com/upptime/upptime>
