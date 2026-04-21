@@ -22,7 +22,7 @@
     "url": "https://app.debridge.finance/",
     "icon": "https://icons.duckduckgo.com/ip3/app.debridge.finance.ico",
     "slug": "de-bridge-app",
-    "status": "up",
+    "status": "down",
     "uptime": "99.99%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
@@ -34,6 +34,7 @@
     "timeMonth": 810,
     "timeYear": 650,
     "dailyMinutesDown": {
+      "2026-04-21": 0,
       "2025-11-18": 38,
       "2025-05-04": 38
     }
